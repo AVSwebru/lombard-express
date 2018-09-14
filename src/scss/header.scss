@@ -1,0 +1,36 @@
+.header {
+    background: #fff;
+    border-bottom: 1px solid #dad9dc;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header__logo {
+    margin: 8px 12px;
+    img {
+        width: 220px;
+        height: 50px;
+    }
+}
+
+.header__main-nav {
+    margin: 8px 12px;
+}
+
+.header__header-tel {
+    margin: 8px 12px;
+}
+
+@media screen and (max-width: $breakpoint-medium) {
+    .header__header-tel {
+        display: none;
+    }
+    .header__main-nav {
+        margin: 0;
+    }
+}

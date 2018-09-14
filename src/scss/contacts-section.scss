@@ -1,0 +1,22 @@
+.contacts-section {
+    padding: 100px 0 0;
+}
+
+.contacts-section__section-title {
+    margin-bottom: 50px;
+}
+
+.contacts-section__text {
+    padding: 50px;
+    font-size: 18px;
+    line-height: 1.8;
+    svg {
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+    .contacts-section__map {
+        order: 2;
+    }
+}

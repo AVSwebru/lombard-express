@@ -1,0 +1,40 @@
+@import 'variables';
+
+// 1. Your custom variables and variable overwrites.
+$global-font-family: 'HelveticaNeueCyr', Helvetica, Arial, sans-serif;
+
+$base-body-font-weight: 300; 
+$base-color: #212529;
+
+$container-max-width: 1140px;
+
+$global-link-color: $theme-color-1;
+$base-link-text-decoration: none;
+$global-link-hover-color: $theme-color-1;
+$base-link-hover-text-decoration: underline;
+
+$global-border: #ddd;
+
+$form-focus-border: $theme-color-1;
+
+
+@mixin hook-table(){
+    max-width: 100%;
+    th {
+        text-align: center !important;
+    }
+}
+
+table {
+    @include hook-table;
+}
+
+// 2. Import default variables and available mixins.
+@import "uikit/src/scss/variables-theme.scss";
+@import "uikit/src/scss/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+
+// 4. Import UIkit.
+@import "uikit/src/scss/uikit-theme.scss";
+@import 'variables';

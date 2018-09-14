@@ -1,0 +1,13 @@
+.home-bid__textarea {
+    height: 200px;
+    resize: none;
+}
+
+.home-bid__submit {
+    padding: 5px 45px;
+    background-color: #f2c93f;
+    white-space: nowrap;
+    &:hover {
+        background-color: darken(#f2c93f, 10%);
+    }
+}
