@@ -37,6 +37,9 @@
             transform: scale(0);
             transition: transform 0.25s;
         }
+        .menu-btn__bg {
+            z-index: -1;
+        }
         &:hover {
             &::before {
                 transform: scale(1);
