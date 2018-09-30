@@ -8,11 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const controller = new ScrollMagic.Controller();
  
     const intro = new TimelineMax();
-    intro.fromTo('.intro__title', 0.5, {x: -200, opacity: 0}, {x: 0, opacity: 1, ease:
-        Power4. easeOut});
-    intro.fromTo('.intro__subtitle', 0.5, {x: -200, opacity: 0}, {x: 0, opacity: 1, ease:
-        Power4. easeOut});
-    intro.fromTo('.intro__link', 0.25, {scale: 0}, {scale: 1});
+    intro
+        .fromTo('.intro__title', 0.5, {x: -200, opacity: 0}, {x: 0, opacity: 1, ease:
+            Power4. easeOut})
+        .fromTo('.intro__subtitle', 0.5, {x: -200, opacity: 0}, {x: 0, opacity: 1, ease:
+            Power4. easeOut})
+        .fromTo('.intro__link', 0.25, {scale: 0}, {scale: 1});
 
     const introScene = new ScrollMagic.Scene({
         triggerElement: '.intro',
@@ -43,8 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .setTween(statistic);
 
     const contacts = new TimelineMax();
-    contacts.staggerFromTo('.contacts-section__text p', 1, {y: 200, opacity: 0}, {y: 0, opacity: 1, ease:
-        Power4. easeOut}, 0.25);
+    contacts.staggerFromTo('.contacts-section__text p', 1, {y: 200, opacity: 0}, {y: 0, opacity: 1, ease: Power4. easeOut}, 0.25);
 
     const contactsScene = new ScrollMagic.Scene({
         triggerElement: '.contacts-section',
@@ -52,5 +52,4 @@ document.addEventListener('DOMContentLoaded', () => {
     })
         .addTo(controller)
         .setTween(contacts);
-    
 });

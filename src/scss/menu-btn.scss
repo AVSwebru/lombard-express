@@ -37,9 +37,6 @@
             transform: scale(0);
             transition: transform 0.25s;
         }
-        .menu-btn__bg {
-            z-index: -1;
-        }
         &:hover {
             &::before {
                 transform: scale(1);
@@ -71,16 +68,7 @@
     }
 }
 
-.menu-btn__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    background-color: $theme-color-2;
-    border-radius: 50%;
-}
+
 
 @media screen and (max-width: $breakpoint-medium) {
     .menu-btn {

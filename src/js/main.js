@@ -10,3 +10,4 @@ const menuBtn = document.querySelector('.js-menu-btn');
 const menu = document.querySelector('.js-menu');
 
 menuToggler(menuBtn, menu);
+

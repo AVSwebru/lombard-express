@@ -26,6 +26,23 @@
     margin: 8px 12px;
 }
 
+.header__menu-btn-wrapper {
+    position: relative;
+}
+
+.header__menu-btn-decor {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: $theme-color-2;
+    border-radius: 50%;
+}
+
 @media screen and (max-width: $breakpoint-medium) {
     .header__header-tel {
         display: none;
