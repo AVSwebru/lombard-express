@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lombard Express</title>
     <link href="main.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body class="page">
     <header class="header" uk-sticky>
@@ -37,12 +38,14 @@
                         Круглосуточно
                     </div>
                 </div>
-                <button class="menu-btn js-menu-btn" type="button">
-                    <span class="menu-btn__line menu-btn__line_first"></span>
-                    <span class="menu-btn__line menu-btn__line_second"></span>
-                    <span class="menu-btn__line menu-btn__line_third"></span>
-                    <span class="menu-btn__bg"></span>
-                </button>
+                <div class="header__menu-btn-wrapper">
+                    <button class="menu-btn js-menu-btn" type="button">
+                        <span class="menu-btn__line menu-btn__line_first"></span>
+                        <span class="menu-btn__line menu-btn__line_second"></span>
+                        <span class="menu-btn__line menu-btn__line_third"></span>
+                    </button>
+                    <div class="header__menu-btn-decor"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -105,7 +108,7 @@
                                 Получите займ наличными удобным для Вас способом.
                             </div>
                         </div>
-                    </div>  
+                    </div>
                 </div>
             </div>
         </section>
@@ -195,7 +198,7 @@
                             </ol>
                         </div>
                     </li>
-                    <li>    
+                    <li>
                         <div class="borrowing__item borrowing__cash">
                             <ol>
                                 <li>Вы отправляете заявку на получение займа</li>
@@ -210,7 +213,7 @@
         </section>
         <section class="about">
             <div class="uk-container">
-                <div class="uk-grid uk-child-width-1-2@m">
+                <!-- <div class="uk-grid uk-child-width-1-2@m">
                     <div>
                         <h3>О компании</h3>
                         <p>Выдаем займы под любые цели клиентов под залог имущества, работаем с 2014 года, оказываем услуги по всей Воронежской области.</p>
@@ -257,6 +260,11 @@
                             </form>
                         </div>
                     </div>
+                </div> -->
+                <div id="app">
+
+                   {{ message }}
+
                 </div>
             </div>
         </section>
@@ -325,5 +333,6 @@
         </div>
     </footer>
     <script src="bundle.js"></script>
+
 </body>
 </html>

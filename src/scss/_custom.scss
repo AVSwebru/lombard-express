@@ -18,7 +18,7 @@ $global-border: #ddd;
 $form-focus-border: $theme-color-1;
 
 
-@mixin hook-table(){
+@mixin hook-table() {
     max-width: 100%;
     th {
         text-align: center !important;

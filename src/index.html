@@ -107,7 +107,7 @@
                                 Получите займ наличными удобным для Вас способом.
                             </div>
                         </div>
-                    </div>  
+                    </div>
                 </div>
             </div>
         </section>
@@ -197,7 +197,7 @@
                             </ol>
                         </div>
                     </li>
-                    <li>    
+                    <li>
                         <div class="borrowing__item borrowing__cash">
                             <ol>
                                 <li>Вы отправляете заявку на получение займа</li>
@@ -212,7 +212,7 @@
         </section>
         <section class="about">
             <div class="uk-container">
-                <div class="uk-grid uk-child-width-1-2@m">
+                <!-- <div class="uk-grid uk-child-width-1-2@m">
                     <div>
                         <h3>О компании</h3>
                         <p>Выдаем займы под любые цели клиентов под залог имущества, работаем с 2014 года, оказываем услуги по всей Воронежской области.</p>
@@ -259,6 +259,60 @@
                             </form>
                         </div>
                     </div>
+                </div> -->
+                <div id="app">
+                  <section class="calculator">
+                    <h2 class="calculator__block-title">
+                      Калькулятор займа
+                    </h2>
+                    <div class="calculator__block">
+                      <label class="calculator__label" for="calculator-sum">
+                        Сумма займа
+                      </label>
+                      <input class="calculator__input" type="text" name="calculator-sum" id="calculator-sum" value="0" v-model="sum">
+                      <div class="calculator__range-container">
+                        <input class="calculator__range" type="range" v-model="sum" min="75000" max="1000000" step="5000">
+                      </div>
+                      <div class="calculator__values">
+                        <div>
+                          от 75 000 р
+                        </div>
+                        <div>
+                          до 1 000 000 р
+                        </div>
+                      </div>
+                   </div>
+                   <div class="calculator__block">
+                     <label class="calculator__label" for="calculator-time">
+                      Срок займа
+                     </label>
+                     <input class="calculator__input" type="text" name="calculator-time" id="calculator-time" value="0" v-model="time">
+                     <div class="calculator__range-container">
+                       <input class="calculator__range" type="range" v-model="time" min="1" max="36">
+                     </div>
+                     <div class="calculator__values">
+                       <div>
+                         от 1 месяца
+                       </div>
+                       <div>
+                         до 3х лет
+                       </div>
+                     </div>
+                  </div>
+                  <div class="calculator__total">
+                    <div>
+                      <label class="calculator__label" for="calculator-rate">
+                        Процентная ставка
+                      </label>
+                      <input class="calculator__total-input" type="text" name="calculator-rate" id="calculator-rate" tab-index="-1" v-model="rate" disabled>
+                    </div>
+                    <div>
+                      <label class="calculator__label" for="calculator-payment">
+                        Ежемесячный платеж
+                      </label>
+                      <input class="calculator__total-input" type="text" name="calculator-payment" id="calculator-payment" v-model="payment" tab-index="-1" disabled>
+                    </div>
+                  </div>
                 </div>
             </div>
         </section>
@@ -326,6 +380,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="bundle.js"></script>
 </body>
 </html>

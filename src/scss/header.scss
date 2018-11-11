@@ -31,6 +31,7 @@
 }
 
 .header__menu-btn-decor {
+    display: none;
     width: 36px;
     height: 36px;
     position: absolute;
@@ -49,5 +50,8 @@
     }
     .header__main-nav {
         margin: 0;
+    }
+    .header__menu-btn-decor  {
+        display: block;
     }
 }
