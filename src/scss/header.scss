@@ -45,6 +45,9 @@
 }
 
 @media screen and (max-width: $breakpoint-medium) {
+    .header__menu-btn-decor {
+        display: block;
+    }
     .header__header-tel {
         display: none;
     }
