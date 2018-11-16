@@ -1,8 +1,11 @@
 .calculator {
   width: 540px;
+  margin: 5% 0 10%;
   padding: 60px;
   box-sizing: border-box;
   background-color: #fff;
+  box-shadow: 0 6px 11px 0px rgba(207, 207, 207, 0.2);
+  border: 1px solid rgb(237, 237, 237);
 }
 
 .calculator__block-title {

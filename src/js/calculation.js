@@ -3,7 +3,7 @@ import TweenMax from 'gsap/src/uncompressed/TweenMax';
 var app = new Vue({
   el: '#app',
   data: {
-    sum: '75000 руб.',
+    sum: 75000,
     time: 1
   },
   computed: {
