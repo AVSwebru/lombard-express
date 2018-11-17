@@ -19,11 +19,6 @@ var app = new Vue({
     },
     payment() {
       return Math.round((this.sum / this.time) + this.overpay);
-    },
-  },
-  watch: {
-    payment: function(newValue) {
-      TweenLite.to(this.$data, 0.5, { tweenedNumber: newValue });
     }
   }
 });
