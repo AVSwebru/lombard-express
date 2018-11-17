@@ -4,10 +4,7 @@ var app = new Vue({
   el: '#app',
   data: {
     sum: 75000,
-    time: 1,
-    rate: 0,
-    overpay: 0,
-    payment: 0
+    time: 1
   },
   computed: {
     rate() {
