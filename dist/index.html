@@ -49,7 +49,7 @@
         </div>
     </header>
     <main class="home">
-        <section class="intro uk-cover-container">
+        <div class="intro uk-cover-container">
             <div class="intro__content">
                 <h1 class="intro__title">Ломбард в Воронеже</h1>
                 <div class="intro__subtitle">Срочный займ под залог имущества</div>
@@ -59,62 +59,88 @@
                 <source src="img/header_bg.ogv" type="video/ogg">
                 <source src="img/header_bg.webm" type="video/webm">
             </video>
-        </section>
-        <div>
-          <div id="app">
-            <section class="calculator">
-              <h2 class="calculator__block-title">
-                Калькулятор займа
-              </h2>
-              <div class="calculator__block">
-                <label class="calculator__label" for="calculator-sum">
-                  Сумма займа
-                </label>
-                <input class="calculator__input" type="text" name="calculator-sum" id="calculator-sum" value="0" v-model="sum">
-                <div class="calculator__range-container">
-                  <input class="calculator__range" type="range" v-model="sum" min="75000" max="1000000" step="5000">
+        </div>
+        <div class="calculations">
+            <div class="uk-container">
+                <div class="calculations__wrapper">
+                    <section id="app" class="calculator">
+                        <h2 class="calculator__title">
+                            Калькулятор займа
+                        </h2>
+                        <div class="calculator__block">
+                            <label class="calculator__label" for="calculator-sum">
+                                Сумма займа
+                            </label>
+                            <input class="calculator__input" type="text" name="calculator-sum" id="calculator-sum" value="0" v-model="sum">
+                            <div class="calculator__range-container">
+                                <input class="calculator__range" type="range" v-model="sum" min="75000" max="1000000" step="5000">
+                            </div>
+                            <div class="calculator__values">
+                                <div>
+                                    от 75 000 р
+                                </div>
+                                <div>
+                                    до 1 000 000 р
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calculator__block">
+                            <label class="calculator__label" for="calculator-time">
+                                Срок займа
+                            </label>
+                            <input class="calculator__input" type="text" name="calculator-time" id="calculator-time" value="0" v-model="time">
+                            <div class="calculator__range-container">
+                                <input class="calculator__range" type="range" v-model="time" min="1" max="36">
+                            </div>
+                            <div class="calculator__values">
+                                <div>
+                                    от 1 месяца
+                                </div>
+                                <div>
+                                    до 3х лет
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calculator__total">
+                            <div class="calculator__total-item">
+                                <label class="calculator__label" for="calculator-rate">
+                                    Процентная ставка
+                                </label>
+                                <input class="calculator__total-input" type="text" name="calculator-rate" id="calculator-rate" tab-index="-1" v-model="rate" disabled>
+                            </div>
+                            <div class="calculator__total-item">
+                                <label class="calculator__label" for="calculator-payment">
+                                    Ежемесячный платеж
+                                </label>
+                                <input class="calculator__total-input" type="text" name="calculator-payment" id="calculator-payment" v-model="payment" tab-index="-1" disabled>
+                            </div>
+                        </div>
+                    </section>
+                    <form class="request-form">
+                        <h2 class="request-form__title">
+                            Узнать решение
+                        </h2>
+                        <div class="request-form__row">
+                            <label class="request-form__label" for="request-name">
+                                Имя
+                            </label>
+                            <input class="request-form__input" id="request-name" name="request-name" type="text" >
+                        </div>
+                        <div class="request-form__row">
+                            <label class="request-form__label" for="request-tel">
+                                Телефон
+                            </label>
+                            <input class="request-form__input" id="request-tel" name="request-tel" type="tel" >
+                        </div>
+                        <button class="request-form__submit" type="submit">
+                            Подать заявку
+                        </button>
+                        <div class="request-form__agreement">
+                            Отправляя заявку, Вы соглашаетесь на обработку <a href="#">персональных данных</a>
+                        </div>
+                    </form>
                 </div>
-                <div class="calculator__values">
-                  <div>
-                    от 75 000 р
-                  </div>
-                  <div>
-                    до 1 000 000 р
-                  </div>
-                </div>
-             </div>
-             <div class="calculator__block">
-               <label class="calculator__label" for="calculator-time">
-                Срок займа
-               </label>
-               <input class="calculator__input" type="text" name="calculator-time" id="calculator-time" value="0" v-model="time">
-               <div class="calculator__range-container">
-                 <input class="calculator__range" type="range" v-model="time" min="1" max="36">
-               </div>
-               <div class="calculator__values">
-                 <div>
-                   от 1 месяца
-                 </div>
-                 <div>
-                   до 3х лет
-                 </div>
-               </div>
             </div>
-            <div class="calculator__total">
-              <div>
-                <label class="calculator__label" for="calculator-rate">
-                  Процентная ставка
-                </label>
-                <input class="calculator__total-input" type="text" name="calculator-rate" id="calculator-rate" tab-index="-1" v-model="rate" disabled>
-              </div>
-              <div>
-                <label class="calculator__label" for="calculator-payment">
-                  Ежемесячный платеж
-                </label>
-                <input class="calculator__total-input" type="text" name="calculator-payment" id="calculator-payment" v-model="payment" tab-index="-1" disabled>
-              </div>
-            </div>
-          </div>
         </div>
         <section class="steps">
             <div class="uk-container">
@@ -316,8 +342,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+              </div>
+          </section>
+        </div>
         <section class="contacts-section">
             <h2 class="contacts-section__section-title section-title">
                 Ломбард в Воронеже

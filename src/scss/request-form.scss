@@ -3,7 +3,11 @@
     padding: 60px 113px 120px 60px;
     box-sizing: border-box;
     background-color: #e8e2dd;
-      box-shadow: 0 11px 29px rgba(207, 207, 207, 0.4);
+    box-shadow: 0 11px 29px rgba(207, 207, 207, 0.4);
+    @media (max-width: $breakpoint-small) {
+        width: 100%;
+        padding: 30px 20px;
+    }
 }
 
 .request-form__title {

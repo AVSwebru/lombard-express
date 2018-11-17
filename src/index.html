@@ -56,16 +56,16 @@
                 <a class="intro__link" href="#bid" data-uk-scroll>Получить займ</a>
             </div>
             <video autoplay loop muted playsinline data-uk-cover>
+                <source src="img/header_bg.mp4" type="video/mp4">
                 <source src="img/header_bg.ogv" type="video/ogg">
                 <source src="img/header_bg.webm" type="video/webm">
             </video>
-<<<<<<< HEAD
         </div>
         <div class="calculations">
             <div class="uk-container">
                 <div class="calculations__wrapper">
                     <section id="app" class="calculator">
-                        <h2 class="calculator__block-title">
+                        <h2 class="calculator__title">
                             Калькулятор займа
                         </h2>
                         <div class="calculator__block">
@@ -103,13 +103,13 @@
                             </div>
                         </div>
                         <div class="calculator__total">
-                            <div>
+                            <div class="calculator__total-item">
                                 <label class="calculator__label" for="calculator-rate">
                                     Процентная ставка
                                 </label>
                                 <input class="calculator__total-input" type="text" name="calculator-rate" id="calculator-rate" tab-index="-1" v-model="rate" disabled>
                             </div>
-                            <div>
+                            <div class="calculator__total-item">
                                 <label class="calculator__label" for="calculator-payment">
                                     Ежемесячный платеж
                                 </label>
@@ -142,64 +142,6 @@
                     </form>
                 </div>
             </div>
-=======
-        </section>
-        <div>
-          <div id="app">
-            <section class="calculator">
-              <h2 class="calculator__block-title">
-                Калькулятор займа
-              </h2>
-              <div class="calculator__block">
-                <label class="calculator__label" for="calculator-sum">
-                  Сумма займа
-                </label>
-                <input class="calculator__input" type="text" name="calculator-sum" id="calculator-sum" value="0" v-model="sum">
-                <div class="calculator__range-container">
-                  <input class="calculator__range" type="range" v-model="sum" min="75000" max="1000000" step="5000">
-                </div>
-                <div class="calculator__values">
-                  <div>
-                    от 75 000 р
-                  </div>
-                  <div>
-                    до 1 000 000 р
-                  </div>
-                </div>
-             </div>
-             <div class="calculator__block">
-               <label class="calculator__label" for="calculator-time">
-                Срок займа
-               </label>
-               <input class="calculator__input" type="text" name="calculator-time" id="calculator-time" value="0" v-model="time">
-               <div class="calculator__range-container">
-                 <input class="calculator__range" type="range" v-model="time" min="1" max="36">
-               </div>
-               <div class="calculator__values">
-                 <div>
-                   от 1 месяца
-                 </div>
-                 <div>
-                   до 3х лет
-                 </div>
-               </div>
-            </div>
-            <div class="calculator__total">
-              <div>
-                <label class="calculator__label" for="calculator-rate">
-                  Процентная ставка
-                </label>
-                <input class="calculator__total-input" type="text" name="calculator-rate" id="calculator-rate" tab-index="-1" v-model="rate" disabled>
-              </div>
-              <div>
-                <label class="calculator__label" for="calculator-payment">
-                  Ежемесячный платеж
-                </label>
-                <input class="calculator__total-input" type="text" name="calculator-payment" id="calculator-payment" v-model="payment" tab-index="-1" disabled>
-              </div>
-            </div>
-          </div>
->>>>>>> 0690ab78c7253a76cab7daaa29e73ea8e5311cb0
         </div>
         <section class="steps">
             <div class="uk-container">
