@@ -71,7 +71,7 @@
                             <label class="calculator__label" for="calculator-sum">
                                 Сумма займа
                             </label>
-                            <input class="calculator__input" type="text" name="calculator-sum" id="calculator-sum" value="0" v-model="sum">
+                            <input class="calculator__input" type="text" name="calculator-sum" id="calculator-sum" value="0" v-model="inputSum">
                             <div class="calculator__range-container">
                                 <input class="calculator__range" type="range" v-model="sum" min="75000" max="1000000" step="5000">
                             </div>
@@ -88,7 +88,7 @@
                             <label class="calculator__label" for="calculator-time">
                                 Срок займа
                             </label>
-                            <input class="calculator__input" type="text" name="calculator-time" id="calculator-time" value="0" v-model="time">
+                            <input class="calculator__input" type="text" name="calculator-time" id="calculator-time" value="0" v-model="inputTime">
                             <div class="calculator__range-container">
                                 <input class="calculator__range" type="range" v-model="time" min="1" max="36">
                             </div>
@@ -106,13 +106,13 @@
                                 <label class="calculator__label" for="calculator-rate">
                                     Процентная ставка
                                 </label>
-                                <input class="calculator__total-input" type="text" name="calculator-rate" id="calculator-rate" tab-index="-1" v-model="rate" disabled>
+                                <input class="calculator__total-input" type="text" name="calculator-rate" id="calculator-rate" tab-index="-1" v-model="rateOutput" disabled>
                             </div>
                             <div class="calculator__total-item">
                                 <label class="calculator__label" for="calculator-payment">
                                     Ежемесячный платеж
                                 </label>
-                                <input class="calculator__total-input" type="text" name="calculator-payment" id="calculator-payment" v-model="payment" tab-index="-1" disabled>
+                                <input class="calculator__total-input" type="text" name="calculator-payment" id="calculator-payment" v-model="paymentOutput" tab-index="-1" disabled>
                             </div>
                         </div>
                     </section>
