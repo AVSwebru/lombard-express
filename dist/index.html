@@ -56,7 +56,6 @@
                 <a class="intro__link" href="#bid" data-uk-scroll>Получить займ</a>
             </div>
             <video autoplay loop muted playsinline data-uk-cover>
-                <source src="img/header_bg.mp4" type="video/mp4">
                 <source src="img/header_bg.ogv" type="video/ogg">
                 <source src="img/header_bg.webm" type="video/webm">
             </video>
@@ -72,16 +71,16 @@
                             <label class="calculator__label" for="calculator-sum">
                                 Сумма займа
                             </label>
-                            <input class="calculator__input" type="text" name="calculator-sum" id="calculator-sum" value="0" v-model="sum">
+                            <input class="calculator__input" type="text" name="calculator-sum" id="calculator-sum" @change="setInputSum" @focusout="setInputSum" v-model="inputSum">
                             <div class="calculator__range-container">
-                                <input class="calculator__range" type="range" v-model="sum" min="75000" max="1000000" step="5000">
+                                <input class="calculator__range" type="range" v-model="sum" min="75000" max="3000000" step="5000">
                             </div>
                             <div class="calculator__values">
                                 <div>
-                                    от 75 000 р
+                                    от 75 000 ₽
                                 </div>
                                 <div>
-                                    до 1 000 000 р
+                                    до 3 000 000 ₽
                                 </div>
                             </div>
                         </div>
@@ -89,16 +88,16 @@
                             <label class="calculator__label" for="calculator-time">
                                 Срок займа
                             </label>
-                            <input class="calculator__input" type="text" name="calculator-time" id="calculator-time" value="0" v-model="time">
+                            <input class="calculator__input" type="text" name="calculator-time" id="calculator-time" @change="setInputTime" @focusout="setInputTime" v-model="inputTime">
                             <div class="calculator__range-container">
-                                <input class="calculator__range" type="range" v-model="time" min="1" max="36">
+                                <input class="calculator__range" type="range" v-model="time" min="1" max="24" step="1">
                             </div>
                             <div class="calculator__values">
                                 <div>
                                     от 1 месяца
                                 </div>
                                 <div>
-                                    до 3х лет
+                                    до 2х лет
                                 </div>
                             </div>
                         </div>
@@ -107,13 +106,13 @@
                                 <label class="calculator__label" for="calculator-rate">
                                     Процентная ставка
                                 </label>
-                                <input class="calculator__total-input" type="text" name="calculator-rate" id="calculator-rate" tab-index="-1" v-model="rate" disabled>
+                                <input class="calculator__total-input" type="text" name="calculator-rate" id="calculator-rate" tab-index="-1" v-model="rateOutput" disabled>
                             </div>
                             <div class="calculator__total-item">
                                 <label class="calculator__label" for="calculator-payment">
                                     Ежемесячный платеж
                                 </label>
-                                <input class="calculator__total-input" type="text" name="calculator-payment" id="calculator-payment" v-model="payment" tab-index="-1" disabled>
+                                <input class="calculator__total-input" type="text" name="calculator-payment" id="calculator-payment" v-model="paymentOutput" tab-index="-1" disabled>
                             </div>
                         </div>
                     </section>
