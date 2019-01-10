@@ -12,34 +12,40 @@
 }
 
 .intro__title {
-    margin-bottom: 10px;
-    color: #fff;
+    margin-bottom: 18px;
+    color: #3c3c3c;
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 1;
     text-transform: uppercase;
-    font-size: 75px;
-    text-shadow: 1px 1px 1px #000;
+    letter-spacing: 6.2px;
 }
 
 .intro__subtitle {
-    margin-bottom: 25px;
-    color: #fff;
-    font-size: 24px;
-    font-weight: 100;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 1px #000;
+    margin-bottom: 38px;
+    color: #3c3c3c;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1;
 }
 
 .intro__link {
     display: inline-block;
-    color: #fff;
-    background: $theme-color-1 url('../img/sprite.svg#vk') 0 50% no-repeat;
-    background-size: 10px 10px;
-    padding: 10px 30px;
+    min-width: 190px;
+    box-sizing: border-box;
+    padding: 17px;
+    background: transparent;
     text-transform: uppercase;
-    border: 1px solid $theme-color-1;
+    border: 2px solid $theme-color-1;
+    text-align: center;
+    color: $theme-color-1;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
     transition: background-color 0.25s;
     &:hover {
-        color: $theme-color-1;
-        background-color: #fff;
+        color: #fff;
+        background-color: $theme-color-1;
         transition: background-color 0.25s;
         text-decoration: none;
     }

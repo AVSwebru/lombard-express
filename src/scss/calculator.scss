@@ -88,13 +88,17 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 1;
+    &[disabled] {
+      -webkit-text-fill-color: #3c3c3c;
+      -webkit-opacity: 1;
+      color: #3c3c3c;
+      background-color: #ffe826;
+    }
 }
 
 .calculator__range-container {
-    overflow: hidden;
-    height: 20px;
-    position: relative;
-    top: -9px;
+  height: 25px;
+  transform: translateY(-11px);
 }
 
 .calculator__range {
