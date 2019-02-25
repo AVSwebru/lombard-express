@@ -63,6 +63,10 @@
     cursor: pointer;
 }
 
+.request-form__textarea {
+    resize: none;
+}
+
 .request-form__agreement {
     color: #797979;
     font-size: 14px;
