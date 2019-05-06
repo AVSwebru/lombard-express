@@ -1,74 +1,74 @@
 .intro {
-    height: 100vh;
-    display: flex;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .intro__content {
-    max-width: 1140px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .intro__title {
-    margin-bottom: 18px;
-    color: #3c3c3c;
-    font-size: 62px;
-    font-weight: 700;
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: 6.2px;
+  margin-bottom: 18px;
+  color: #3c3c3c;
+  font-size: 62px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 6.2px;
 }
 
 .intro__subtitle {
-    margin-bottom: 38px;
-    color: #3c3c3c;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 1;
+  margin-bottom: 38px;
+  color: #3c3c3c;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .intro__link {
-    display: inline-block;
-    min-width: 190px;
-    box-sizing: border-box;
-    padding: 17px;
-    background: transparent;
-    text-transform: uppercase;
-    border: 2px solid $theme-color-1;
-    text-align: center;
-    color: $theme-color-1;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1;
+  display: inline-block;
+  min-width: 190px;
+  box-sizing: border-box;
+  padding: 17px;
+  background: transparent;
+  text-transform: uppercase;
+  border: 2px solid $theme-color-1;
+  text-align: center;
+  color: $theme-color-1;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  transition: background-color 0.25s;
+  &:hover {
+    color: #fff;
+    background-color: $theme-color-1;
     transition: background-color 0.25s;
-    &:hover {
-        color: #fff;
-        background-color: $theme-color-1;
-        transition: background-color 0.25s;
-        text-decoration: none;
-    }
+    text-decoration: none;
+  }
 }
 
 @media screen and (max-width: $breakpoint-medium) {
-    .intro__content {
-        text-align: center;
-    }
-    .intro__title {
-        font-size: 45px;
-    }
-    .intro__subtitle {
-        font-size: 20px;
-    }
+  .intro__content {
+    text-align: center;
+  }
+  .intro__title {
+    font-size: 45px;
+  }
+  .intro__subtitle {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: $breakpoint-small) {
-    .intro {
-       height: 100vmax;
-    }
-    .intro__title {
-        font-size: 35px;
-        letter-spacing: 0;
-    }
+  .intro {
+    height: 100vmax;
+  }
+  .intro__title {
+    font-size: 35px;
+    letter-spacing: 0;
+  }
 }
