@@ -3,18 +3,18 @@ import TweenMax from 'gsap/src/uncompressed/TweenMax';
 var app = new Vue({
   el: '#app',
   data: {
-    sum: 75000,
+    sum: 800000,
     time: 1,
-    inputSum: '75 000 ₽',
+    inputSum: '800 000 ₽',
     inputTime: '1 мес.',
   },
   computed: {
     rate() {
-      if ((this.sum >= 75000) && (this.sum <= 200000)) return 10;
-      if ((this.sum > 200000) && (this.sum <= 300000)) return 8;
-      if ((this.sum > 300000) && (this.sum <= 700000)) return 6.5;
-      if ((this.sum > 700000) && (this.sum <= 1000000)) return 6;
-      if (this.sum > 1000000) return 5;
+      if (this.sum >= 800000 && this.sum <= 2000000) return 10;
+      if (this.sum > 2000000 && this.sum <= 4000000) return 8;
+      if (this.sum > 4000000 && this.sum <= 6000000) return 6.5;
+      if (this.sum > 6000000 && this.sum <= 10000000) return 6;
+      if (this.sum > 10000000) return 5;
     },
     rateOutput() {
       return `${this.rate} %`;
@@ -23,11 +23,11 @@ var app = new Vue({
       return (this.sum / 100) * this.rate;
     },
     payment() {
-      return Math.round((this.sum / this.time) + this.overpay);
+      return Math.round(this.sum / this.time + this.overpay);
     },
     paymentOutput() {
       return `${this.formatSum(this.payment)} ₽`;
-    }
+    },
   },
   watch: {
     sum() {
@@ -42,7 +42,9 @@ var app = new Vue({
       return input.replace(/\D/g, '');
     },
     formatSum(sum) {
-      var sumString = String(sum).split('').reverse();
+      var sumString = String(sum)
+        .split('')
+        .reverse();
       for (let i = 1; i <= Math.floor(sumString.length / 3); i++) {
         if (i > 1) {
           sumString.splice(i * 3 + 1, 0, ' ');
@@ -50,15 +52,18 @@ var app = new Vue({
           sumString.splice(i * 3, 0, ' ');
         }
       }
-      return sumString.reverse().join('').trim();
+      return sumString
+        .reverse()
+        .join('')
+        .trim();
     },
     setInputSum(event) {
       var sumCount = this.purifyInput(event.target.value);
-      if (sumCount > 3000000) {
-        this.sum = 3000000;
+      if (sumCount > 10000000) {
+        this.sum = 10000000;
       } else {
-        if (sumCount < 75000) {
-          this.sum = 75000;
+        if (sumCount < 800000) {
+          this.sum = 800000;
         } else {
           this.sum = sumCount;
         }
@@ -77,6 +82,6 @@ var app = new Vue({
         }
       }
       this.inputTime = `${this.time} мес.`;
-    }
-  }
+    },
+  },
 });
