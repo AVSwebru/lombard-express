@@ -1,6 +1,4 @@
 import './uikit';
-import TweenMax from 'gsap/src/uncompressed/TweenMax';
-import TimelineMax from 'gsap/src/uncompressed/TimelineMax';
 import './animations';
 import './calculation';
 
@@ -10,4 +8,6 @@ import menuToggler from './menu';
 const menuBtn = document.querySelector('.js-menu-btn');
 const menu = document.querySelector('.js-menu');
 
-menuToggler(menuBtn, menu);
+if (!window.matchMedia('(max-width: 1200px)').matches) {
+  menuToggler(menuBtn, menu);
+}
