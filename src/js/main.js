@@ -8,6 +8,6 @@ import menuToggler from './menu';
 const menuBtn = document.querySelector('.js-menu-btn');
 const menu = document.querySelector('.js-menu');
 
-if (!window.matchMedia('(max-width: 1200px)').matches) {
+if (window.matchMedia('(max-width: 960px)').matches) {
   menuToggler(menuBtn, menu);
 }
